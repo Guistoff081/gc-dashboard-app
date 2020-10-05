@@ -10,7 +10,11 @@ end
 gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 gem 'sprockets'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap_form'
+gem 'rails_bootstrap_navbar'
+gem 'groupdate'
 gem 'rails', '~> 5.1.7'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server

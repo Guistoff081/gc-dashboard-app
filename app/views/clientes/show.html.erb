@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nome:</strong>
+  <strong>Nome Completo:</strong>
   <%= @cliente.nome %>
 </p>
 
 <p>
-  <strong>Cpf:</strong>
+  <strong>CPF:</strong>
   <%= @cliente.cpf %>
 </p>
 
@@ -16,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Endereco:</strong>
+  <strong>Endereço:</strong>
   <%= @cliente.endereco %>
 </p>
 
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+<%= link_to 'Editar', edit_cliente_path(@cliente), :class => "btn btn-primary btn-sm" %> |
+<%= link_to 'Voltar', clientes_path, :class => "btn btn-danger btn-sm" %>

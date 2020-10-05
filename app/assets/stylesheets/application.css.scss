@@ -1,4 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "rails_bootstrap_forms";
 
-
+table, th, td {
+    border: 3px solid black;
+}

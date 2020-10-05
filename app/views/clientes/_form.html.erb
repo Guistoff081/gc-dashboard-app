@@ -1,4 +1,4 @@
-<%= form_with(model: cliente, local: true) do |form| %>
+<%= bootstrap_form_with(model: cliente, local: true) do |form| %>
   <% if cliente.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome, id: :cliente_nome %>
-  </div>
+        <div class="field">
+          <%= form.text_field :nome, id: :cliente_nome %>
+        </div>
+ 
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.number_field :cpf, id: :cliente_cpf %>
-  </div>
+        <div class="field">
+          <%= form.number_field :cpf, id: :cliente_cpf %>
+        </div>
 
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone, id: :cliente_telefone %>
-  </div>
 
-  <div class="field">
-    <%= form.label :endereço %>
-    <%= form.text_area :endereco, id: :cliente_endereco %>
-  </div>
+        <div class="field">
+          <%= form.text_field :telefone, id: :cliente_telefone %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+        <div class="field">
+          <%= form.text_area :endereco, id: :cliente_endereco %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit class: 'btn btn-primary', value: "Confirmar" %>
+        </div>
+      </div>   
+
 <% end %>

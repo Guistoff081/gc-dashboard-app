@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20201002211949) do
   enable_extension "plpgsql"
 
   create_table "clientes", force: :cascade do |t|
-    t.string "nome"
-    t.integer "cpf"
-    t.string "telefone"
-    t.text "endereco"
+    t.string "nome", collation: "pt_BR.utf8"
+    t.bigint "cpf"
+    t.string "telefone", collation: "pt_BR.utf8"
+    t.text "endereco", collation: "pt_BR.utf8"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

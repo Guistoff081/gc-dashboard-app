@@ -2,7 +2,7 @@
 
 <h1>Clientes</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Nome Completo</th>
@@ -20,9 +20,9 @@
         <td><%= cliente.cpf %></td>
         <td><%= cliente.telefone %></td>
         <td><%= cliente.endereco %></td>
-        <td><%= link_to 'Show', cliente %></td>
-        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', cliente, :class => "btn btn-primary btn-sm" %></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente), :class => "btn btn-success btn-sm" %></td>
+        <td><%= link_to 'Excluir', cliente, method: :delete, data: { confirm: 'Tem certeza que quer excluir esse item?' }, :class => "btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,6 @@
 
 <br>
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= line_chart Cliente.group_by_day(:created_at).count %>
+
+<%= link_to 'Cadastrar Cliente', new_cliente_path, :class => "btn btn-default btn-lg" %>
