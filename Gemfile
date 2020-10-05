@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'boostrap-sass'
+gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 gem 'sprockets'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'rails', '~> 5.1.7'
