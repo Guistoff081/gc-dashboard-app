@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cvalor_total: 
+  : 
+  keys: MyString
+  clientes_id: 
+  produtos_id: 
+
+two:
+  cvalor_total: 
+  : 
+  keys: MyString
+  clientes_id: 
+  produtos_id: 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201002211949) do
+ActiveRecord::Schema.define(version: 20201008123116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,21 @@ ActiveRecord::Schema.define(version: 20201002211949) do
     t.bigint "cpf"
     t.string "telefone", collation: "pt_BR.utf8"
     t.text "endereco", collation: "pt_BR.utf8"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "produtos", force: :cascade do |t|
+    t.string "nome"
+    t.integer "quantidade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "price"
+    t.string "marca"
+  end
+
+  create_table "vendas", force: :cascade do |t|
+    t.decimal "valor_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
