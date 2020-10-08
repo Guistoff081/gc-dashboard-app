@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'vendas/index'
   resources :vendas
   get 'clientes/index'
   resources :clientes

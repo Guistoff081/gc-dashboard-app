@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201008123116) do
+ActiveRecord::Schema.define(version: 20201008132723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clientes", force: :cascade do |t|
-    t.string "nome", collation: "pt_BR.utf8"
+    t.string "nome"
     t.bigint "cpf"
-    t.string "telefone", collation: "pt_BR.utf8"
-    t.text "endereco", collation: "pt_BR.utf8"
+    t.string "telefone"
+    t.text "endereco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20201008123116) do
     t.integer "quantidade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "price"
+    t.decimal "price"
     t.string "marca"
   end
 
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 20201008123116) do
     t.decimal "valor_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "clientes_id"
+    t.bigint "produtos_id"
+    t.index ["clientes_id"], name: "index_vendas_on_clientes_id"
+    t.index ["produtos_id"], name: "index_vendas_on_produtos_id"
   end
 
+  add_foreign_key "vendas", "clientes", column: "clientes_id"
+  add_foreign_key "vendas", "produtos", column: "produtos_id"
 end
