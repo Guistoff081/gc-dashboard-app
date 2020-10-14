@@ -7,14 +7,14 @@
     <div class="row">
         <div class="col-sm-12">
             <strong>Clientes Cadastrados</strong>
-                <%= line_chart Cliente.group_by_day(:created_at).count, refresh: 60 %>
+                <%= line_chart Cliente.group_by_day(:created_at).count, refresh: 10 %>
                     <div class="col-sm-4">
                         <strong>Produtos Cadastrados</strong>
-                            <%= pie_chart Produto.group(:marca).count, refresh: 60 %>    
+                            <%= pie_chart Produto.group(:marca).count, refresh: 10 %>    
                     </div>
                 <div class=col-sm-8>
                     <strong>Clientes por nome</strong>
-                    <%= column_chart Cliente.group(:nome).count, refresh: 60 %>
+                    <%= column_chart Cliente.group(:nome).count, refresh: 10 %>
                 </div>
        
         </div>  

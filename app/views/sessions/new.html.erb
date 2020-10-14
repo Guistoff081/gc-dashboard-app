@@ -1,0 +1,16 @@
+
+<p id=”alert”><%= alert %></p>
+    <h1>Login</h1>
+    <%= bootstrap_form sessions_path do |form| %>
+    <div class=”field”>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
+    </div>
+    <div class=”field”>
+        <%= label_tag :password %>
+        <%= form.password_field_tag :password %>
+    </div>
+    <div class=”actions”>
+        <%= form.submit class: 'btn btn-primary', value: "Entrar" %>
+    </div>
+<% end %>

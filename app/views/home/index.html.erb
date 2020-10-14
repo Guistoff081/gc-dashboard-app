@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <p id=”notice”><%= notice %></p>
+    <h1 class="text-center">Dashboard</h1>
+
+    <div class="row">
+        <div class="cards col-sm-2" style="color:white;background-color:#1F756A;text-align:center">
+            <strong>Operações em Andamento</strong>
+            <p>0</p>
+
+        </div>
+        <div class="cards col-sm-2" style="color:black;background-color:yellow;text-align:center">
+            <strong>Operações aguardando atualização</strong>
+            <p>0</p>
+            <%= pie_chart Produto.group(:marca).count, refresh: 10 %> 
+        </div>
+        <div class="cards col-sm-2" style="color:white;background-color:red;text-align:center">
+            <strong>Operações Canceladas</strong>
+            <p>0</p>
+        </div>
+        <div class="cards col-sm-2" style="color:white;background-color:blue;text-align:center">
+            <strong>Operações Concluídas</strong>
+            <strong><p>0</p></strong>
+        </div>
+        <div class="cards col-sm-4" style="color:white;background-color:grey;text-align:center">
+            <strong>Faturamento</strong>
+        </div>
+    </div>
+</div>
+
+
