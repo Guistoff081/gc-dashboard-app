@@ -8,20 +8,24 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
+#gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 gem 'sprockets'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.2', :require => 'sprockets/railtie'
 gem 'bootstrap_form'
 gem 'rails_bootstrap_navbar'
 gem 'groupdate'
 gem 'rails', '~> 5.1.7'
-
+gem 'cancancan'
+gem 'sassc', '~> 2.4'
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
+gem 'font-awesome-sass', '~> 5.15', '>= 5.15.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'popper_js'

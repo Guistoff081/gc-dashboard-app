@@ -1,11 +1,168 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+ 
+#op{
+    background-color: #970400;
+    border-radius: 5px;
+    color: white;
 
-table, th, td {
-    border: 3px solid black;
+}
+#op:after {
+    font-family: "Font Awesome 5 Free";
+    display: inline;
+    position: absolute;
+    font-weight: 900;
+    font-size: 9em;
+    content: "\f272";
+    opacity: 0.25;
+    top: 16%;
+    left: 69%;
+
+}
+#oa {
+    background-color: #6B7A00;
+    border-radius: 5px;
+    color: white;
+}
+#oa:after {
+    font-family: "Font Awesome 5 Free";
+    display: inline;
+    position: absolute;
+    font-weight: 900;
+    font-size: 9em;
+    content: "\f3ed";
+    opacity: 0.25;
+    top: 16%;
+    left: 65%;
+
 }
 
-.cards {
+#oea {
+    background-color: #0A0760;
+    border-radius: 5px;
+    color: white;
+}
+#oea:after {
+    font-family: "Font Awesome 5 Free";
+    display: inline;
+    position: absolute;
+    font-weight: 900;
+    font-size: 7em;
+    content: "\f48b";
+    opacity: 0.25;
+    top: 35%;
+    left: 65%;
 
+}
+
+#ofh {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+#ofh:after {
+    font-family: "Font Awesome 5 Free";
+    display: inline;
+    position: absolute;
+    font-weight: 900;
+    font-size: 7em;
+    content: "\f0d1";
+    opacity: 0.25;
+    top: 35%;
+    left: 65%;
+}
+
+#ope{
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+#opc{
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+#opp{
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+#opo{
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+
+#oi{
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+#opa{
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+.card-header{
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid white;
+}
+
+.card-title {
+    font-size: 6em;
+    font-weight: bold;
+    border-right: 1px solid white;
+    float: left;
+    
+}
+
+.card-text{
+    color: yellow;
+    display: inline-flexbox;
+    float: right;
+}
+.card-deck.n2{
+    padding-top: 30px;
+}
+.card-deck.n3{
+    padding-top: 30px;
+}
+.card-header.n2{
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #066758   ;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: white;
+}
+
+.card-header.n3{
+    background-color: #0526FF;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.card-header.n4{
+    background-color: #FD0D00;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }

@@ -1,30 +1,81 @@
-<div class="container-fluid">
-    <p id=”notice”><%= notice %></p>
-    <h1 class="text-center">Dashboard</h1>
-
-    <div class="row">
-        <div class="cards col-sm-2" style="color:white;background-color:#1F756A;text-align:center">
-            <strong>Operações em Andamento</strong>
-            <p>0</p>
-
-        </div>
-        <div class="cards col-sm-2" style="color:black;background-color:yellow;text-align:center">
-            <strong>Operações aguardando atualização</strong>
-            <p>0</p>
-            <%= pie_chart Produto.group(:marca).count, refresh: 10 %> 
-        </div>
-        <div class="cards col-sm-2" style="color:white;background-color:red;text-align:center">
-            <strong>Operações Canceladas</strong>
-            <p>0</p>
-        </div>
-        <div class="cards col-sm-2" style="color:white;background-color:blue;text-align:center">
-            <strong>Operações Concluídas</strong>
-            <strong><p>0</p></strong>
-        </div>
-        <div class="cards col-sm-4" style="color:white;background-color:grey;text-align:center">
-            <strong>Faturamento</strong>
-        </div>
+<div class="card-deck">
+  <div class="card" id="op">
+    <div class="card-header">OPERAÇÕES PENDENTES</div>
+    <div class="card-body">
+      <h5 class="card-title">366</h5>
+      <p class="card-text">Aguardando Operador</p>
+      <p class="card-text">Aguardando Parceiro</p>
     </div>
+  </div>
+  <div class="card" id="oa">
+    <div class="card-header">OPERAÇÕES AGENDADAS</div>
+    <div class="card-body">
+      <h5 class="card-title">40</h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card" id="oea">
+    <div class="card-header">OPERAÇÕES EM ANDAMENTO</div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card" id="ofh">
+    <div class="card-header">OPERAÇÕES FINALIZADAS HOJE</div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
 </div>
-
+<div class="card-deck n2">
+  <div class="card" id="ope">
+    <div class="card-header n2">Operações por ESTADO | top 5 |</div>
+    <div class="card-body">
+      <%= pie_chart [["SP", 60], ["RJ", 30], ["RS", 25], ["BA", 15], ["PE", 10]] %>
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card" id="opc">
+    <div class="card-header n2">Operações por CLIENTE | top 5 |</div>
+    <div class="card-body">
+      <%= pie_chart [["DUPONT", 60], ["SAMSUNG", 30], ["DOW", 25], ["B2W/DIRECT", 15], ["DHL", 10]] %>
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card" id="opp">
+    <div class="card-header n2">Operações por PARCEIRO | top 5 |</div>
+    <div class="card-body">
+      <%= pie_chart [["SALVADOR/ALL", 115], ["7FACILITIES", 30], ["BAZISUL", 25], ["ALFORGE", 15], ["INFORTE", 10]] %>
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card" id="opo">
+    <div class="card-header n2">Operações por OPERADOR</div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+<div class="card-deck n3">
+  <div class="card" id="oi">
+  <div class="card-header n3">Operações iniciadas</div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+  <div class="card" id="opa">
+  <div class="card-header n4">Operações atrasadas</div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
 
