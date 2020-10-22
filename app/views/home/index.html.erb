@@ -11,21 +11,45 @@
     <div class="card-header">OPERAÇÕES AGENDADAS</div>
     <div class="card-body">
       <h5 class="card-title">40</h5>
-      <p class="card-text"></p>
+      <p class="card-text">Para Hoje</p>
+      <p class="card-text">Para Outro Dia</p>
     </div>
   </div>
   <div class="card" id="oea">
     <div class="card-header">OPERAÇÕES EM ANDAMENTO</div>
     <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text"></p>
+      <h5 class="card-title">120</h5>
+      <p class="card-text">Atualização</p>
+      <table class="table-responsive-sm">
+        <thead>
+          <tr>
+            <th id="fstTh">Equipe Desloc.</th>
+            <th>Obs. Desloc.</th>
+            <th>Equipe Origem</th>
+            <th>Obs. Origem</th>
+            <th>Iniciada</th>
+            <th id="lstTh">No Destino</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="fstTd">20</td>
+            <td>02</td>
+            <td>30</td>
+            <td>05</td>
+            <td>60</td>
+            <td id="lstTd">03</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <div class="card" id="ofh">
     <div class="card-header">OPERAÇÕES FINALIZADAS HOJE</div>
     <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text"></p>
+      <h5 class="card-title">350</h5>
+      <p class="card-text">KM Extra</p>
+      <p class="card-text">HR Extra</p>
     </div>
   </div>
 </div>
@@ -33,7 +57,8 @@
   <div class="card" id="ope">
     <div class="card-header n2">Operações por ESTADO | top 5 |</div>
     <div class="card-body">
-      <%= pie_chart [["SP", 60], ["RJ", 30], ["RS", 25], ["BA", 15], ["PE", 10]] %>
+      <% datae = [["SP", 50], ["RJ", 30], ["RS", 25], ["BA", 18], ["PE", 15]] %>
+      <%= pie_chart datae, library: { pieSliceText: 'value', chartArea: {top: 15,right: 13,bottom: 13,left: 18}, legend: { position: "left", labels: { fontSize: 26 } } }%>
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
     </div>
@@ -41,7 +66,8 @@
   <div class="card" id="opc">
     <div class="card-header n2">Operações por CLIENTE | top 5 |</div>
     <div class="card-body">
-      <%= pie_chart [["DUPONT", 60], ["SAMSUNG", 30], ["DOW", 25], ["B2W/DIRECT", 15], ["DHL", 10]] %>
+      <% datac = [["DUPONT", 60], ["SAMSUNG", 30], ["DOW", 25], ["B2W/DIRECT", 15], ["DHL", 10]]%>
+      <%= pie_chart datac, library: { pieSliceText: 'value', chartArea: {top: 15,right: 13,bottom: 13,left: 18}, legend: { position: "left", labels: { fontSize: 20}}} %>
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
     </div>
@@ -49,7 +75,7 @@
   <div class="card" id="opp">
     <div class="card-header n2">Operações por PARCEIRO | top 5 |</div>
     <div class="card-body">
-      <%= pie_chart [["SALVADOR/ALL", 115], ["7FACILITIES", 30], ["BAZISUL", 25], ["ALFORGE", 15], ["INFORTE", 10]] %>
+      <%= pie_chart [["SALVADOR", 90], ["7FACILITIES", 50], ["BAZISUL", 45], ["ALFORGE", 35], ["INFORTE", 30]], library: {pieSliceText:'value', chartArea: {top: 15,right: 13,bottom: 13,left: 18}, legend: { position: "left", labels: { fontSize: 26 } }} %>
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
     </div>
@@ -64,18 +90,17 @@
 </div>
 <div class="card-deck n3">
   <div class="card" id="oi">
-  <div class="card-header n3">Operações iniciadas</div>
+    <div class="card-header n3">Operações iniciadas</div>
     <div class="card-body">
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
     </div>
   </div>
   <div class="card" id="opa">
-  <div class="card-header n4">Operações atrasadas</div>
+    <div class="card-header n4">Operações atrasadas</div>
     <div class="card-body">
       <h5 class="card-title"></h5>
       <p class="card-text"></p>
     </div>
   </div>
 </div>
-

@@ -123,16 +123,21 @@
     font-weight: bold;
     border-right: 1px solid white;
     float: left;
+    text-align: center;
     
 }
 
 .card-text{
     color: yellow;
-    display: inline-flexbox;
+    display: flex;
     float: right;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .card-deck.n2{
     padding-top: 30px;
+    margin: 15px, 15px, 15px, 15px;
+    
 }
 .card-deck.n3{
     padding-top: 30px;
@@ -165,4 +170,26 @@
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+}
+
+table{
+    background-color: rgba(0,0,0, 0.2);
+    border: none
+}
+td{
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    font-weight: bold;
+}
+th{
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
+
+#lstTd, #lstTh{
+    border-right: none;
+}
+#fstTd, #fstTh{
+    border-left: none;
 }
