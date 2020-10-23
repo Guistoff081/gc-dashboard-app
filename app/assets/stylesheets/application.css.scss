@@ -2,12 +2,11 @@
 @import "rails_bootstrap_forms";
 @import "font-awesome-sprockets";
 @import "font-awesome";
- 
-#op{
+
+#op {
     background-color: #970400;
     border-radius: 5px;
     color: white;
-
 }
 #op:after {
     font-family: "Font Awesome 5 Free";
@@ -19,10 +18,9 @@
     opacity: 0.25;
     top: 16%;
     left: 69%;
-
 }
 #oa {
-    background-color: #6B7A00;
+    background-color: #6b7a00;
     border-radius: 5px;
     color: white;
 }
@@ -36,11 +34,10 @@
     opacity: 0.25;
     top: 16%;
     left: 65%;
-
 }
 
 #oea {
-    background-color: #0A0760;
+    background-color: #0a0760;
     border-radius: 5px;
     color: white;
 }
@@ -54,7 +51,6 @@
     opacity: 0.25;
     top: 35%;
     left: 65%;
-
 }
 
 #ofh {
@@ -74,44 +70,39 @@
     left: 65%;
 }
 
-#ope{
+#ope {
     border-radius: 5px;
     border: 1px solid;
-
 }
 
-#opc{
+#opc {
     border-radius: 5px;
     border: 1px solid;
-
 }
 
-#opp{
+#opp {
     border-radius: 5px;
     border: 1px solid;
-
 }
 
-#opo{
+#opo {
     border-radius: 5px;
     border: 1px solid;
-
 }
 
-
-#oi{
+#oi {
     border-radius: 5px;
     border: 1px solid;
-
 }
 
-#opa{
+#opa {
     border-radius: 5px;
     border: 1px solid;
-
+    margin: auto;
+    padding: auto;
 }
 
-.card-header{
+.card-header {
     font-size: 1.3em;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -124,36 +115,28 @@
     border-right: 1px solid white;
     float: left;
     text-align: center;
-    
 }
 
-.card-text{
+.card-text {
     color: yellow;
     display: flex;
     float: right;
     padding-right: 20px;
     padding-left: 20px;
 }
-.card-deck.n2{
-    padding-top: 30px;
-    margin: 15px, 15px, 15px, 15px;
-    
-}
-.card-deck.n3{
-    padding-top: 30px;
-}
-.card-header.n2{
+
+.card-header.n2 {
     font-size: 1.3em;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #066758   ;
+    background-color: #066758;
     padding-bottom: 0;
     padding-top: 0;
     color: white;
 }
 
-.card-header.n3{
-    background-color: #0526FF;
+.card-header.n3 {
+    background-color: #0526ff;
     padding-bottom: 0;
     padding-top: 0;
     font-size: 1.3em;
@@ -162,8 +145,8 @@
     color: white;
 }
 
-.card-header.n4{
-    background-color: #FD0D00;
+.card-header.n4 {
+    background-color: #fd0d00;
     padding-bottom: 0;
     padding-top: 0;
     font-size: 1.3em;
@@ -172,24 +155,53 @@
     color: white;
 }
 
-table{
-    background-color: rgba(0,0,0, 0.2);
-    border: none
+#ongoing {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-weight: bold;
+    border-collapse: collapse;
 }
-td{
-    border-top: 1px solid;
-    border-right: 1px solid;
+#ongoing th {
     border-left: 1px solid;
-    font-weight: bold;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
 }
-th{
+#ongoing td {
     border-right: 1px solid;
     border-left: 1px solid;
 }
-
-#lstTd, #lstTh{
-    border-right: none;
+#norborder {
+    border-right: none !important;
 }
-#fstTd, #fstTh{
-    border-left: none;
+#nolborder {
+    border-left: none !important;
+}
+
+#late {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+  
+}
+#late td {
+    padding: 3px;
+    font-size: 16px;
+}
+#late tr:nth-child(even) {
+    background-color: #e5e5e5;
+}
+#late th {
+    background-color: #bababa;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: 3px;
+}
+.fstCol {
+    color: blue;
+    text-align: center;
+}
+.lstCol {
+    color: red;
+    font-weight: bold;
+    text-align: center;
 }
