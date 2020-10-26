@@ -1,4 +1,4 @@
-<div class="card-deck mt-1">
+<div class="card-deck mt-4">
   <div class="card" id="op">
     <div class="card-header">OPERAÇÕES PENDENTES</div>
     <div class="card-body">
@@ -94,16 +94,16 @@
         <div class="card" id="oi">
           <div class="card-header n3">Operações iniciadas</div>
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+          <% opini = [["Operação ocorre sem alteração", 45], ["Parada na operação", 15], ["Pernoite iniciada", 10], ["Pernoite sem alteração", 10], ["Pernoite finalizada", 02], ["Reinício de operação", 12], ["Operação em alerta", 00], ["Operação em perigo", 00], ["Sinistro", 00], ["Chegada no destino", 30], ["Aguardando no destino", 11]]%>
+          <%= bar_chart opini, library: { chartArea: {top:15, right:10, left:125, bottom: 15}, colors: ["#066758", "#1EFD44"]} %>
           </div>
         </div>
       </div>  
       <div class="col-sm-8">    
           <div class="card" id="opa">
     <div class="card-header n4">Operações atrasadas</div>
-    <div class="card-body">
-      <table class="table-responsive table" id="late">
+    <div class="card-body table-responsive">
+      <table class="table" id="late">
         <thead>
           <tr>
             <th>Número</th>
@@ -345,7 +345,7 @@
             
           </tbody>
         </table>
-        <hr style="width:400px;text-align:center;">
+        <hr style="width:400px;text-align:center;background-color:black;">
       </div>
     </div>
   </div>
