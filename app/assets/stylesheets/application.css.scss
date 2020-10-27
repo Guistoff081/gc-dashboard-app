@@ -94,9 +94,7 @@
     border-radius: 5px;
     border: 1px solid;
     padding-bottom: 45px;
-
 }
-
 
 #opa {
     border-radius: 5px;
@@ -182,7 +180,6 @@
 #late {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-  
 }
 #late td {
     padding: 5px;
@@ -206,4 +203,79 @@
     color: red;
     font-weight: bold;
     text-align: center;
+}
+.table-borderless {
+    text-align: center;
+    margin-top: -25px;
+}
+.profilepic {
+    border: 2px solid #33857a;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+hr {
+    margin-top: 0.5rem;
+    margin-bottom: 2.4rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.picli {
+    display: inline;
+    float: right;
+    margin-right: 10%;
+}
+
+#topo th {
+    color: #066758;
+    font-weight: lighter;
+    font-size: 18px;
+}
+#topo td {
+    padding: 5px;
+}
+.opqnt {
+    font-size: 42px;
+    font-weight: bold;
+    color: #066758;
+}
+.pflpanel {
+    margin-left: 7%;
+}
+dt {
+    color: #066758;
+}
+
+.tdgreen{
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    background-color: #28B100;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tdorange{
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    background-color: #F99B14;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.tdred{
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    background-color: #FD1812;
+    color: white;
+    font-size: 16x;
+    font-weight: bold;
 }

@@ -94,96 +94,95 @@
         <div class="card" id="oi">
           <div class="card-header n3">Operações iniciadas</div>
           <div class="card-body">
-          <% opini = [["Operação ocorre sem alteração", 45], ["Parada na operação", 15], ["Pernoite iniciada", 10], ["Pernoite sem alteração", 10], ["Pernoite finalizada", 02], ["Reinício de operação", 12], ["Operação em alerta", 00], ["Operação em perigo", 00], ["Sinistro", 00], ["Chegada no destino", 30], ["Aguardando no destino", 11]]%>
-          <%= bar_chart opini, library: { chartArea: {top:15, right:10, left:125, bottom: 15}, colors: ["#066758", "#1EFD44"]} %>
+            <% opini = [["Operação ocorre sem alteração", 45], ["Parada na operação", 15], ["Pernoite iniciada", 10], ["Pernoite sem alteração", 10], ["Pernoite finalizada", 02], ["Reinício de operação", 12], ["Operação em alerta", 00], ["Operação em perigo", 00], ["Sinistro", 00], ["Chegada no destino", 30], ["Aguardando no destino", 11]]%>
+            <%= bar_chart opini, library: { chartArea: {top:15, right:10, left:125, bottom: 15}, colors: ["#066758", "#1EFD44"]} %>
           </div>
         </div>
-      </div>  
-      <div class="col-sm-8">    
-          <div class="card" id="opa">
-    <div class="card-header n4">Operações atrasadas</div>
-    <div class="card-body table-responsive">
-      <table class="table" id="late">
-        <thead>
-          <tr>
-            <th>Número</th>
-            <th>Status</th>
-            <th>Cliente</th>
-            <th>Parceiro</th>
-            <th>Operador</th>
-            <th>Tempo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="fstCol">00045637</td>
-            <td>Aguardando envio dos dados da equipe</td>
-            <td>J&C Gestão de Riscos</td>
-            <td>Salvador - BA</td>
-            <td>Fulano da Silva</td>
-            <td class="lstCol">55 min</td>
-          </tr>
-          <tr>
-            <td class="fstCol">00045637</td>
-            <td>Aguardando expelhamento</td>
-            <td>J&C Gestão de Riscos</td>
-            <td>Salvador - BA</td>
-            <td>Fulano da Silva</td>
-            <td class="lstCol">21 horas</td>
-          </tr>
-          <tr>
-            <td class="fstCol">00045637</td>
-            <td>Aguardando saída da equipe</td>
-            <td>J&C Gestão de Riscos</td>
-            <td>Salvador - BA</td>
-            <td>Fulano da Silva</td>
-            <td class="lstCol">06 horas</td>
-          </tr>
-          <tr>
-            <td class="fstCol">00045637</td>
-            <td>Aguardando Equipe na Origem</td>
-            <td>J&C Gestão de Riscos</td>
-            <td>Salvador - BA</td>
-            <td>Fulano da Silva</td>
-            <td class="lstCol">09 min</td>
-          </tr>
-          <tr>
-            <td class="fstCol">-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td class="lstCol">-</td>
-          </tr>
-          <tr>
-            <td class="fstCol">-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td class="lstCol">-</td>
-          </tr>
-          <tr>
-            <td class="fstCol">-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td class="lstCol">-</td>
-          </tr>
-        </tbody>
-      </table>
+      </div>
+      <div class="col-sm-8">
+        <div class="card" id="opa">
+          <div class="card-header n4">Operações atrasadas</div>
+          <div class="card-body table-responsive">
+            <table class="table" id="late">
+              <thead>
+                <tr>
+                  <th>Número</th>
+                  <th>Status</th>
+                  <th>Cliente</th>
+                  <th>Parceiro</th>
+                  <th>Operador</th>
+                  <th>Tempo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fstCol">00045637</td>
+                  <td>Aguardando envio dos dados da equipe</td>
+                  <td>J&C Gestão de Riscos</td>
+                  <td>Salvador - BA</td>
+                  <td>Fulano da Silva</td>
+                  <td class="lstCol">55 min</td>
+                </tr>
+                <tr>
+                  <td class="fstCol">00045637</td>
+                  <td>Aguardando expelhamento</td>
+                  <td>J&C Gestão de Riscos</td>
+                  <td>Salvador - BA</td>
+                  <td>Fulano da Silva</td>
+                  <td class="lstCol">21 horas</td>
+                </tr>
+                <tr>
+                  <td class="fstCol">00045637</td>
+                  <td>Aguardando saída da equipe</td>
+                  <td>J&C Gestão de Riscos</td>
+                  <td>Salvador - BA</td>
+                  <td>Fulano da Silva</td>
+                  <td class="lstCol">06 horas</td>
+                </tr>
+                <tr>
+                  <td class="fstCol">00045637</td>
+                  <td>Aguardando Equipe na Origem</td>
+                  <td>J&C Gestão de Riscos</td>
+                  <td>Salvador - BA</td>
+                  <td>Fulano da Silva</td>
+                  <td class="lstCol">09 min</td>
+                </tr>
+                <tr>
+                  <td class="fstCol">-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td class="lstCol">-</td>
+                </tr>
+                <tr>
+                  <td class="fstCol">-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td class="lstCol">-</td>
+                </tr>
+                <tr>
+                  <td class="fstCol">-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td class="lstCol">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  </div>
-    </div>
-
   </div>
   <div class="col-3 col-sm-3">
-    <div class="card" id="opo">
+    <div class="card h-100" id="opo">
       <div class="card-header n2">Operações por OPERADOR</div>
-      <div class="card-body">
-        <table class="table-borderless">
+      <div class="card-body table-responsive">
+        <table class="table table-borderless" id="topo">
           <thead>
             <tr>
               <th>Perfil</th>
@@ -194,161 +193,66 @@
           </thead>
           <tbody>
             <tr>
-              <td>00</td>
+              <td><%= image_tag '37f2656cabdd0bf2490690327f994174.jpg', height: '70px', width: '70px', class: 'profilepic' %></td>
               <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
+              <td class="opqnt">54</td>
+              <td class="tdgreen">30</td>
+              <td class="tdorange">15</td>
+              <td  class="tdred">04</td>
             </tr>
             <tr>
-              <td>25</td>
+              <td><%= image_tag '112803715c789422d976f6c726ca67da.jpg', height: '70px', width: '70px', class: 'profilepic' %></td>
               <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
+              <td class="opqnt">54</td>
+              <td class="tdgreen">30</td>
+              <td class="tdorange">15</td>
+              <td class="tdred">04</td>
             </tr>
             <tr>
-              <td>25</td>
+              <td><%= image_tag '77a3fbe6cd59f1d722ff06d352ae19eb.jpg', height: '70px', width: '70px', class: 'profilepic' %></td>
               <td>Fulano da Silva</td>
-              <td>30</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
+              <td class="opqnt">54</td>
+              <td class="tdgreen">30</td>
+              <td class="tdorange">15</td>
+              <td class="tdred">04</td>
             </tr>
             <tr>
-              <td>25</td>
+              <td><%= image_tag 'download.jpeg', height: '70px', width: '70px', class: 'profilepic'%> </td>
               <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
+              <td class="opqnt">54</td>
+              <td class="tdgreen">30</td>
+              <td class="tdorange">15</td>
+              <td class="tdred">04</td>
             </tr>
             <tr>
-              <td>25</td>
+              <td><%= image_tag 'guigo.jpeg', height: '70px', width: '70px', class: 'profilepic'%> </td>
               <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
+              <td class="opqnt">54</td>
+              <td class="tdgreen">30</td>
+              <td class="tdorange">15</td>
+              <td class="tdred">04</td>
             </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            <tr>
-              <td>25</td>
-              <td>Fulano da Silva</td>
-              <td>54</td>
-              <td>30</td>
-              <td>15</td>
-              <td>04</td>
-            </tr>
-            
-            
-            
-            
-            
-            
           </tbody>
         </table>
-        <hr style="width:400px;text-align:center;background-color:black;">
+        <hr style="width:450px;text-align:center;background-color:#33857A;">
+        <div class="pflpanel" ><%= image_tag 'guigo.jpeg', height: '200px', width: '200px', class: 'profilepic'%>
+          <div class="picli">
+            <dl>
+              <dt>Nome</dt>
+              <dd>Fulano da Silva</dd>
+              <dt>Operações Agora</dt>
+              <dd>65 Operações</dd>
+              <dt>Agendadas no Mês</dt>
+              <dd>458 Operações</dd>
+              <dt>Iniciadas no Mês</dt>
+              <dd>342 Operações</dd>
+              <dt>Finalizadas no Mês</dt>
+              <dd>423</dd>
+            </dl>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-  
 </div>
