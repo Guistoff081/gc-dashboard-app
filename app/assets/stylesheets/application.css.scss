@@ -206,7 +206,7 @@
 }
 .table-borderless {
     text-align: center;
-    margin-top: -25px;
+    margin-top: -30px;
 }
 .profilepic {
     border: 2px solid #33857a;
@@ -232,6 +232,7 @@ hr {
 }
 #topo td {
     padding: 5px;
+    vertical-align: middle;
 }
 .opqnt {
     font-size: 42px;
@@ -245,37 +246,16 @@ dt {
     color: #066758;
 }
 
-.tdgreen{
+.status{
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
     text-align: center;
     display: flex;
-    background-color: #28B100;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
 }
 
-.tdorange{
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    text-align: center;
-    display: flex;
-    background-color: #F99B14;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-}
-.tdred{
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    text-align: center;
-    display: flex;
-    background-color: #FD1812;
-    color: white;
-    font-size: 16x;
-    font-weight: bold;
-}
+.redondo {
+    border-radius: 20px;
+    padding: 6px;
+    font-size: 26px;
+    color: white !important;
+} 
