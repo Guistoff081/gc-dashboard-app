@@ -2,6 +2,7 @@
   "name": "gc-dashboard-app",
   "private": true,
   "dependencies": {
+    "chartjs-plugin-annotation": "^0.5.7",
     "yarn": "^1.22.10"
   }
 }

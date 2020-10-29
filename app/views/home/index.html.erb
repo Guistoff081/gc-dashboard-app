@@ -3,23 +3,40 @@
     <div class="card-header">OPERAÇÕES PENDENTES</div>
     <div class="card-body">
       <h5 class="card-title">366</h5>
-      <p class="card-text">Aguardando Operador</p>
-      <p class="card-text">Aguardando Parceiro</p>
+      <div class="side-layout">
+        <h6 class="naop">20</h6>
+        <span class="taop">Aguardando Operador</span>
+      </div>
+      <div class="side-layout">
+        <h6 class="napa">15</h6>
+        <span class="tapa">Aguardando Parceiro</span>
+      </div>
     </div>
   </div>
   <div class="card" id="oa">
     <div class="card-header">OPERAÇÕES AGENDADAS</div>
     <div class="card-body">
       <h5 class="card-title">40</h5>
-      <p class="card-text">Para Hoje</p>
-      <p class="card-text">Para Outro Dia</p>
+      <div class="side-layout">
+        <h6 class="ftdn">30</h6>
+        <span class="ftdt">Para Hoje</span>
+      </div>
+      <div class="side-layout">
+        <h6 class="fadn">15</h6>
+        <span class="fadt">Para Outro Dia</span>
+      </div>
+      <% opa = [["Dados da Equipe " " 20", 20], ["Espelhamento " " 05", 05], ["Saída de Equipe " " 15", 15]]%>
+      <%= bar_chart opa, height: "150px", library: {vAxis:{ textStyle:{color: "#fff", fontSize: 14}}, chartArea: {top: 50,right: 50,bottom: 15,left: 140}, backgroundColor: "none", colors: ["#0526FF", "#FFFFFF"]} %>
     </div>
   </div>
   <div class="card" id="oea">
     <div class="card-header">OPERAÇÕES EM ANDAMENTO</div>
     <div class="card-body">
       <h5 class="card-title">120</h5>
-      <p class="card-text">Atualização</p>
+      <h3 class="sttsupd">Atualização</h3>
+      <h3 class="sttsg">80</h3>
+      <h3 class="sttsy">30</h3>
+      <h3 class="sttsr">10</h3>
       <table class="table-responsive-sm" id="ongoing">
         <thead>
           <tr>
@@ -48,8 +65,16 @@
     <div class="card-header">OPERAÇÕES FINALIZADAS HOJE</div>
     <div class="card-body">
       <h5 class="card-title">350</h5>
-      <p class="card-text">KM Extra</p>
-      <p class="card-text">HR Extra</p>
+      <div class="side-layout">
+        <h6 class="kmextran">200</h6>
+        <span class="kmextra">KM Extra</span>
+      </div>
+      <div class="side-layout">
+        <h6 class="hrextran">65</h6>
+        <span class="hrextra">HR Extra</span>
+      </div>
+      <% opfh = [["Norte/Nordeste   80" , 80], ["Centro Oeste   35", 35], ["Sudeste   210", 210], ["Sul  25", 25 ]]%>
+      <%= bar_chart opfh, height: "150px", width: "450px", library: {chartArea: {top: 50,right: 50,bottom: 15,left: 130}, legend: {position: "none"}, vAxis:{ textStyle:{color: "#fff", fontSize: 14}}, backgroundColor: 'none', colors: ["#0526FF", "#FFFFFF"]} %>
     </div>
   </div>
 </div>
@@ -62,8 +87,6 @@
           <div class="card-body">
             <% datae = [["SP", 50], ["RJ", 30], ["RS", 25], ["BA", 18], ["PE", 15]] %>
             <%= pie_chart datae, library: { pieSliceText: 'value', chartArea: {top: 15,right: 13,bottom: 13,left: 18}, legend: { position: "left", labels: { fontSize: 26 } } }%>
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -73,8 +96,6 @@
           <div class="card-body">
             <% datac = [["DUPONT", 60], ["SAMSUNG", 30], ["DOW", 25], ["B2W/DIRECT", 15], ["DHL", 10]]%>
             <%= pie_chart datac, library: { pieSliceText: 'value', chartArea: {top: 15,right: 13,bottom: 13,left: 18}, legend: { position: "left", labels: { fontSize: 20}}} %>
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -83,15 +104,13 @@
           <div class="card-header n2">Operações por PARCEIRO | top 5 |</div>
           <div class="card-body">
             <%= pie_chart [["SALVADOR", 90], ["7FACILITIES", 50], ["BAZISUL", 45], ["ALFORGE", 35], ["INFORTE", 30]], library: {pieSliceText:'value', chartArea: {top: 15,right: 13,bottom: 13,left: 18}, legend: { position: "left", labels: { fontSize: 26 } }} %>
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
           </div>
         </div>
       </div>
     </div>
     <div class="row mt-4">
       <div class="col-sm-4">
-        <div class="card" id="oi">
+        <div class="card h-100" id="oi">
           <div class="card-header n3">Operações iniciadas</div>
           <div class="card-body">
             <% opini = [["Operação ocorre sem alteração", 45], ["Parada na operação", 15], ["Pernoite iniciada", 10], ["Pernoite sem alteração", 10], ["Pernoite finalizada", 02], ["Reinício de operação", 12], ["Operação em alerta", 00], ["Operação em perigo", 00], ["Sinistro", 00], ["Chegada no destino", 30], ["Aguardando no destino", 11]]%>
@@ -100,7 +119,7 @@
         </div>
       </div>
       <div class="col-sm-8">
-        <div class="card" id="opa">
+        <div class="card h-100" id="opa">
           <div class="card-header n4">Operações atrasadas</div>
           <div class="card-body table-responsive">
             <table class="table" id="late">
@@ -244,21 +263,23 @@
             </tr>
           </tbody>
         </table>
-        <hr style="width:450px;text-align:center;background-color:#33857A;">
-        <div class="pflpanel" ><%= image_tag 'guigo.jpeg', height: '200px', width: '200px', class: 'profilepic'%>
-          <div class="picli">
-            <dl>
-              <dt>Nome</dt>
-              <dd>Fulano da Silva</dd>
-              <dt>Operações Agora</dt>
-              <dd>65 Operações</dd>
-              <dt>Agendadas no Mês</dt>
-              <dd>458 Operações</dd>
-              <dt>Iniciadas no Mês</dt>
-              <dd>342 Operações</dd>
-              <dt>Finalizadas no Mês</dt>
-              <dd>423</dd>
-            </dl>
+        <hr>
+        <div>
+          <div class="pflpanel" ><%= image_tag 'guigo.jpeg', height: '200px', width: '200px', class: 'profilepic'%>
+            <div class="picli">
+              <dl>
+                <dt>Nome</dt>
+                <dd>Fulano da Silva</dd>
+                <dt>Operações Agora</dt>
+                <dd>65 Operações</dd>
+                <dt>Agendadas no Mês</dt>
+                <dd>458 Operações</dd>
+                <dt>Iniciadas no Mês</dt>
+                <dd>342 Operações</dd>
+                <dt>Finalizadas no Mês</dt>
+                <dd>423</dd>
+              </dl>
+            </div>
           </div>
         </div>
       </div>

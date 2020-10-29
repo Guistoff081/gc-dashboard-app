@@ -1,0 +1,2 @@
+# config/initializers/Chartkick.rb
+
