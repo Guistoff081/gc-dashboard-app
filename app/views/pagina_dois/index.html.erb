@@ -1,0 +1,278 @@
+<%= stylesheet_link_tag 'pagina_dois', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="row row-cols-md mt-4">
+    <div class="col-md-3 mb-4">
+        <div class="card h-100" id="op">
+            <div class="card-header">OPERAÇÕES PENDENTES</div>
+            <div class="card-body">
+                <h5 class="card-title n2">36</h5>
+                <div class="side-layout">
+                    <h6 class="naop">20</h6>
+                    <span class="taop">Aguardando Operador</span>
+                </div>
+                <div class="side-layout">
+                    <h6 class="napa">15</h6>
+                    <span class="tapa">Aguardando Escolha</span>
+                </div>
+                <div class="side-layout">
+                    <h6 class="napa">15</h6>
+                    <span class="tapa">Aguardando Parceiro</span>
+                </div>
+                <% ope = [{"name":"Operações Pendentes","data":{"2020-10-11":15,"2020-10-12":35, "2020-10-15":25, "2020-10-16":45, "2020-10-20":55,"2020-10-22":15, "2020-10-24":40, "2020-10-26":35, "2020-10-28":50,"2020-10-30":60}}]%>
+                <%= line_chart ope, height: "120px", width: "415px", library: {legend:{ position: "none"}, backgroundColor: "none", vAxis:{ textPosition: "none"}, hAxis:{ textPosition: "none"}, colors: ["#FFFFFF", "#0526FF"]}%>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100" id="oa">
+            <div class="card-header">OPERAÇÕES AGENDADAS</div>
+            <div class="card-body">
+                <h5 class="card-title n2">40</h5>
+                <div class="side-layout">
+                    <h6 class="ftdn">30</h6>
+                    <span class="ftdt">Para Hoje</span>
+                </div>
+                <div class="side-layout">
+                    <h6 class="fadn">15</h6>
+                    <span class="fadt">Para Outro Dia</span>
+                </div>
+                <% opa = [["Dados da Equipe " " 20", 20], ["Espelhamento " " 05", 05], ["Saída de Equipe " " 15", 15]]%>
+                <%= bar_chart opa, height: "150px", width: "415px", library: {vAxis:{ textStyle:{color: "#fff", fontSize: 14}}, chartArea: {top: 50,right: 50,bottom: 15,left: 140}, backgroundColor: "none", colors: ["#0526FF", "#FFFFFF"]} %>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100" id="oea">
+            <div class="card-header">OPERAÇÕES EM ANDAMENTO</div>
+            <div class="card-body">
+                <h5 class="card-title n1">120</h5>
+                <h3 class="sttsupd">Atualização</h3>
+                <h3 class="sttsg">80</h3>
+                <h3 class="sttsy">30</h3>
+                <h3 class="sttsr">10</h3>
+                <table class="table-responsive-sm" id="ongoing">
+                    <thead>
+                        <tr>
+                            <th id="nolborder">Equipe Desloc.</th>
+                            <th>Obs. Desloc.</th>
+                            <th>Equipe Origem</th>
+                            <th>Obs. Origem</th>
+                            <th>Iniciada</th>
+                            <th id="norborder">No Destino</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="nolborder">20</td>
+                            <td>02</td>
+                            <td>30</td>
+                            <td>05</td>
+                            <td>60</td>
+                            <td id="norborder">03</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100" id="oi">
+            <div class="card-header n3">Operações iniciadas</div>
+            <div class="card-body">
+                <% opini = [["Operação ocorre sem alteração " " 45", 45], ["Parada na operação " " 15", 15], ["Pernoite iniciada " " 10", 10], ["Pernoite sem alteração " "10 ", 10], ["Pernoite finalizada " " 02", 02], ["Reinício de operação " " 12", 12], ["Operação em alerta " " 00", 00], ["Operação em perigo " " 00", 00], ["Sinistro " " 00", 00], ["Chegada no destino " " 30", 30], ["Aguardando no destino " " 11", 11]]%>
+                <%= bar_chart opini, width: "100%", library: { chartArea: {top:15, right:15 , left:280, bottom: 15}, colors: ["#066758", "#1EFD44"], legend: {position: "none"}, vAxis:{ textPosition:"out", textStyle:{ bold: "true", fontSize: 16}}} %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 ">
+        <div class="card h-100" id="opo">
+            <div class="card-header n2">Operações por OPERADOR</div>
+            <div class="card-body table-responsive">
+                <table class="table table-borderless h-100" id="topo">
+                    <thead>
+                        <tr>
+                            <th>Perfil</th>
+                            <th>Nome</th>
+                            <th>Qtd. OP.</th>
+                            <th>Pendente</th>
+                            <th>Agendada</th>
+                            <th>Andamento</th>
+                            <th>Tempo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%= image_tag '2122.jpg', height: '65px', width: '65px', class: 'profilepic' %></td>
+                            <td>Fulano da Silva</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="status">
+                                <span class="badge badge-success mr-1 redondo">35</span>
+                                <span class="badge badge-warning mr-1 redondo">15</span>
+                                <span class="badge badge-danger redondo">04</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><%= image_tag 'gata.jpg', height: '65px', width: '65px', class: 'profilepic' %></td>
+                            <td>Fulano da Silva</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="status">
+                                <span class="badge badge-success mr-1 redondo">35</span>
+                                <span class="badge badge-warning mr-1 redondo">15</span>
+                                <span class="badge badge-danger redondo">04</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><%= image_tag '1222.jpg', height: '65px', width: '65px', class: 'profilepic' %></td>
+                            <td>Fulano da Silva</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="status">
+                                <span class="badge badge-success mr-1 redondo">35</span>
+                                <span class="badge badge-warning mr-1 redondo">15</span>
+                                <span class="badge badge-danger redondo">04</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><%= image_tag 'download.jpeg', height: '65px', width: '65px', class: 'profilepic'%> </td>
+                            <td>Fulano da Silva</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="status">
+                                <span class="badge badge-success mr-1 redondo">35</span>
+                                <span class="badge badge-warning mr-1 redondo">15</span>
+                                <span class="badge badge-danger redondo">04</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><%= image_tag 'guigo.jpeg', height: '65px', width: '65px', class: 'profilepic'%> </td>
+                            <td>Fulano da Silva</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="opqnt">54</td>
+                            <td class="status">
+                                <span class="badge badge-success mr-1 redondo">35</span>
+                                <span class="badge badge-warning mr-1 redondo">15</span>
+                                <span class="badge badge-danger redondo">04</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100" id="ofh">
+                    <div class="card-header">OPERAÇÕES FINALIZADAS HOJE</div>
+                    <div class="card-body">
+                        <h5 class="card-title">350</h5>
+                        <div class="side-layout">
+                            <h6 class="kmextran">200</h6>
+                            <span class="kmextra">KM Extra</span>
+                        </div>
+                        <div class="side-layout">
+                            <h6 class="hrextran">65</h6>
+                            <span class="hrextra">HR Extra</span>
+                        </div>
+                        <% opfh = [["Norte/Nordeste   80" , 80], ["Centro Oeste   35", 35], ["Sudeste   210", 210], ["Sul  25", 25 ]]%>
+                        <%= bar_chart opfh, height: "150px", width: "430px", library: {chartArea: {top: 50,right: 50,bottom: 15,left: 130}, legend: {position: "none"}, vAxis:{ textStyle:{color: "#fff", fontSize: 14}}, backgroundColor: 'none', colors: ["#0526FF", "#FFFFFF"]} %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header n5">Mensagens</div>
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada tortor ut tempus tincidunt. </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card" id="opa">
+                    <div class="card-header n4">Operações atrasadas</div>
+                    <div class="card-body table-responsive">
+                        <table class="table" id="late">
+                            <thead>
+                                <tr>
+                                    <th>Número</th>
+                                    <th>Status</th>
+                                    <th>Cliente</th>
+                                    <th>Parceiro</th>
+                                    <th>Operador</th>
+                                    <th>Tempo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fstCol">00045637</td>
+                                    <td>Aguardando envio dos dados da equipe</td>
+                                    <td>J&C Gestão de Riscos</td>
+                                    <td>Salvador - BA</td>
+                                    <td>Fulano da Silva</td>
+                                    <td class="lstCol">55 min</td>
+                                </tr>
+                                <tr>
+                                    <td class="fstCol">00045637</td>
+                                    <td>Aguardando expelhamento</td>
+                                    <td>J&C Gestão de Riscos</td>
+                                    <td>Salvador - BA</td>
+                                    <td>Fulano da Silva</td>
+                                    <td class="lstCol">21 horas</td>
+                                </tr>
+                                <tr>
+                                    <td class="fstCol">00045637</td>
+                                    <td>Aguardando saída da equipe</td>
+                                    <td>J&C Gestão de Riscos</td>
+                                    <td>Salvador - BA</td>
+                                    <td>Fulano da Silva</td>
+                                    <td class="lstCol">06 horas</td>
+                                </tr>
+                                <tr>
+                                    <td class="fstCol">00045637</td>
+                                    <td>Aguardando Equipe na Origem</td>
+                                    <td>J&C Gestão de Riscos</td>
+                                    <td>Salvador - BA</td>
+                                    <td>Fulano da Silva</td>
+                                    <td class="lstCol">09 min</td>
+                                </tr>
+                                <tr>
+                                    <td class="fstCol">-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="lstCol">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="fstCol">-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="lstCol">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

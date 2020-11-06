@@ -1,10 +1,11 @@
-// Place all the styles related to the home controller here.
+// Place all the styles related to the pagina_dois controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: https://sass-lang.com/
 @import "bootstrap";
 @import "rails_bootstrap_forms";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 
 #op {
     background-color: #970400;
@@ -96,13 +97,10 @@
 #oi {
     border-radius: 5px;
     border: 1px solid;
-    padding-bottom: 45px;
 }
-
 #opa {
     border-radius: 5px;
     border: 1px solid;
-    padding-bottom: 55px;
 }
 
 .card-header {
@@ -113,7 +111,20 @@
 }
 
 .card-title {
-    font-size: 7em;
+    font-size: 6.5em;
+    font-weight: bold;
+    border-right: 1px solid white;
+    line-height: 75px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 90px;
+    
+  
+}
+
+.card-title.n1{
+    font-size: 6.5em;
     font-weight: bold;
     border-right: 1px solid white;
     line-height: 75px;
@@ -121,11 +132,22 @@
     text-align: center;
     margin-right: 20px;
     margin-bottom: 50px;
-
+    
+  
+}
+.card-title.n2 {
+    font-size: 11em;
+    font-weight: bold;
+    border-right: 1px solid white;
+    line-height: 105px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+  
 }
 
 .card-text {
-    color: yellow;
+    color: black;
     display: flex;
     float: right;
     padding-right: 20px;
@@ -133,6 +155,15 @@
 }
 
 .card-header.n2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #066758;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: white;
+}
+.card-header.n5 {
     font-size: 1.3em;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -212,7 +243,7 @@
     text-align: center;
 }
 .table-borderless {
-    margin-top: -30px;
+    margin-top: -18px;
 }
 .profilepic {
     border: 2px solid #33857a;
@@ -238,6 +269,7 @@ hr {
     font-weight: lighter;
     font-size: 18px;
     text-align: center;
+   
 }
 #topo td {
     text-align: center;
@@ -273,31 +305,31 @@ dt {
 } 
 
 .naop{
-    font-size: 36px;
+    font-size: 40px;
     color: #FFE600;
     margin-right: 20px;
-    margin-top: -8px;
+    position: relative;
 }
 .napa{
-    font-size: 36px;
+    font-size: 40px;
     color: #FFE600;
     margin-right: 20px;
-    margin-top: -5px;
+    position: relative;
 }
 
 .taop{
     color: #FFE600;
     margin-left: 12px;
-
+    position: relative;
 }
 .tapa{
     
     color: #FFE600;
     margin-left: 12px;
-
+    position: relative;
 }
 
-#chart-1, #chart-2,  #chart-3{
+#chart-1, #chart-2,  #chart-4{
     position: absolute;
     bottom: 0;
    
@@ -334,11 +366,14 @@ dt {
     color: #FD0D00;
     margin-right: 20px;
     font-size: 36px;
-    margin-top: -8px;
+    margin-top: -7px;
+    position: relative;
+    
 }
 .kmextra{
     color: #FD0D00;
     font-weight: bold;
+    position: relative;
     
 }
 .hrextran{
@@ -346,11 +381,13 @@ dt {
     font-size: 36px;
     margin-right: 42px;
     margin-top: -5px;
+    position: relative;
 }
 .hrextra{
     color: #FD0D00;
     font-weight: bold;
-    vertical-align: middle;  
+    vertical-align: middle; 
+    position: relative; 
 }
 .side-layout{
     display: flex;
